@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import {
   Box,
-  FormControl,
+  Button,
   Grid,
   IconButton,
   InputAdornment,
-  InputLabel,
-  OutlinedInput,
+  TextField,
   Typography,
 } from "@material-ui/core";
 import RightGridImage from "../../images/rightGridImage.png";
+import { toast } from "react-toastify";
 
 // Style
 import useStyles from "./login.style";
@@ -23,8 +23,9 @@ import {
   Visibility,
   VisibilityOff,
 } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ history }) => {
   const classes = useStyles();
   const [values, setValues] = useState({
     email: "",
@@ -32,15 +33,26 @@ const Login = () => {
     showPassword: false,
   });
 
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
+  const { email, password, showPassword } = values;
+
+  const handleChange = (name) => (evt) => {
+    setValues({ ...values, [name]: evt.target.value });
   };
 
-  const handleShowPassword = () => {
+  const handleClickShowPassword = () => {
     setValues({
       ...values,
       showPassword: !values.showPassword,
     });
+  };
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    if (email && password) {
+      history.push("/dashboard");
+    } else {
+      toast.error("Please Input Correct Data");
+    }
   };
 
   return (
@@ -58,7 +70,7 @@ const Login = () => {
           <Box style={{ textAlign: "center" }}>
             <Box
               style={{
-                width: "43%",
+                width: "55%",
                 margin: "auto",
               }}
             >
@@ -76,34 +88,36 @@ const Login = () => {
                 <span className={classes.logo}>suite</span>.
               </Typography>
 
-              <form autoComplete="off">
-                <FormControl variant="outlined">
-                  <InputLabel>Enter email...</InputLabel>
-                  <OutlinedInput
-                    type="email"
-                    size="small"
-                    style={{ margin: "5% 0" }}
-                    value={values.email}
-                    onChange={handleChange("email")}
-                  />
-                </FormControl>
-
-                <FormControl variant="outlined">
-                  <InputLabel>Password...</InputLabel>
-                  <OutlinedInput
-                    type={
-                      values.showPassword
-                        ? "text"
-                        : "password"
-                    }
-                    value={values.password}
-                    onChange={handleChange("password")}
-                    endAdornment={
-                      <InputAdornment position="end">
+              <form
+                autoComplete="off"
+                onSubmit={handleSubmit}
+              >
+                <TextField
+                  variant="outlined"
+                  label="Enter Email..."
+                  name="email"
+                  type="email"
+                  className={classes.textBox}
+                  value={email}
+                  onChange={handleChange("email")}
+                  fullWidth
+                  size="small"
+                />
+                <TextField
+                  variant="outlined"
+                  label="Password..."
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  className={classes.textBox}
+                  value={password}
+                  onChange={handleChange("password")}
+                  fullWidth
+                  size="small"
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment>
                         <IconButton
-                          aria-label="toggle password visibility"
-                          onClick={handleShowPassword}
-                          edge="end"
+                          onClick={handleClickShowPassword}
                         >
                           {values.showPassword ? (
                             <Visibility />
@@ -112,10 +126,56 @@ const Login = () => {
                           )}
                         </IconButton>
                       </InputAdornment>
-                    }
-                  />
-                </FormControl>
+                    ),
+                  }}
+                />
                 {/* helperText="Use 8 or more characters to make a strong password" */}
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  className={classes.buttonCss}
+                  type="submit"
+                >
+                  Sign In
+                </Button>
+                <br />
+                <Typography variant="body2">
+                  New User?{" "}
+                  <Link to="/">Signup instead</Link>
+                </Typography>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "11px",
+                    borderBottom: "1px solid black",
+                    textAlign: "center",
+                    margin: "8% 0",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: "16px",
+                      backgroundColor: "white",
+                      padding: "0 7px",
+                    }}
+                  >
+                    Or continue with
+                  </span>
+                </div>
+                <Button className={classes.actionBtn}>
+                  <i
+                    className="fab fa-google fa-2x"
+                    style={{ color: "red" }}
+                  ></i>
+                </Button>
+                <Button
+                  className={classes.actionBtn}
+                >
+                  <i
+                    className="fab fa-facebook fa-2x"
+                    style={{ color: "blue" }}
+                  ></i>
+                </Button>
               </form>
             </Box>
           </Box>

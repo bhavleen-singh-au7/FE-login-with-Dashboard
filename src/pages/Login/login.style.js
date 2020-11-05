@@ -18,6 +18,20 @@ const useStyles = makeStyles((theme) => ({
   imageAlign: {
     margin: "10% 0",
   },
+  textBox: {
+    // backgroundColor: "#add8e6",
+    margin: "5% 0",
+  },
+  buttonCss: {
+    padding: "4% 20%",
+    borderRadius: "10px",
+    margin: "5% 0",
+  },
+  actionBtn: {
+    border: "1px solid black",
+    padding: "3% 8%",
+    margin: "0 10%",
+  },
 }));
 
 export default useStyles;
