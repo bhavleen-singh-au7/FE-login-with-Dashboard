@@ -26,6 +26,8 @@ import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import NotInterestedIcon from "@material-ui/icons/NotInterested";
 import ErrorOutlinedIcon from "@material-ui/icons/ErrorOutlined";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import InstagramIcon from "@material-ui/icons/Instagram";
 
 const Dashboard = () => {
   const classes = useStyles();
@@ -38,6 +40,8 @@ const Dashboard = () => {
           <Grid
             item
             lg={2}
+            md={3}
+            sm={false}
             style={{
               padding: "20px 10px",
             }}
@@ -223,7 +227,7 @@ const Dashboard = () => {
             </Paper>
           </Grid>
 
-          <Grid item lg={7}>
+          <Grid item lg={7} md={9} sm={12}>
             <Grid container>
               <Grid sm={3} style={{ padding: "1% 4%" }}>
                 <Typography>
@@ -234,20 +238,509 @@ const Dashboard = () => {
                 <Paper>Require manual Action</Paper>
               </Grid>
               <Grid sm={3} style={{ padding: "1% 4%" }}>
-                <Paper>Marked as Safe{" "}<BeenhereOutlinedIcon/></Paper>
+                <Paper>
+                  Marked as Safe <BeenhereOutlinedIcon />
+                </Paper>
               </Grid>
               <Grid sm={3} style={{ padding: "1% 4%" }}>
                 <Paper>
-                  Hidden{" "}
-                  <VisibilityOffIcon />
+                  Hidden <VisibilityOffIcon />
                 </Paper>
               </Grid>
             </Grid>
+            <Typography
+              variant="caption"
+              display="block"
+              gutterBottom
+            >
+              Showing 36 Comments
+            </Typography>
+            <Paper
+              elevation={3}
+              className={classes.pagesInfo}
+            >
+              <Grid container>
+                <Grid
+                  style={{ marginRight: "10px" }}
+                  item
+                  xs={1}
+                >
+                  <Avatar
+                    alt="Prayag Mukhi"
+                    src="/static/images/avatar/1.jpg"
+                    className={classes.large}
+                  />
+                </Grid>
+                <Grid style={{ flexGrow: 1 }} item xs={10}>
+                  <Typography
+                    variant="h5"
+                    style={{ fontWeight: "bold" }}
+                    color="primary"
+                  >
+                    Prayag Mukhi
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    display="block"
+                    gutterBottom
+                  >
+                    2:03 PM Today
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <ErrorOutlinedIcon
+                    color="secondary"
+                    fontSize="large"
+                  />
+                </Grid>
+              </Grid>
+              <Grid container style={{ marginTop: "3% 0" }}>
+                <Grid
+                  item
+                  xs={11}
+                  style={{
+                    paddingRight: "3%",
+                    margin: "2% 0",
+                  }}
+                >
+                  <Typography variant="subtitle1">
+                    Prayag should marry piyush Prayag should
+                    he do that marry piyush Prayag should
+                    marry piyush Prayag should he do that
+                    marry piyush Prayag should marry piyush
+                    Prayag should he do that marry piyush
+                  </Typography>
+                </Grid>
+                <Grid item style={{ margin: "auto" }}>
+                  <ArrowForwardIosIcon />
+                </Grid>
+              </Grid>
+              <Grid container>
+                <Grid style={{ flexGrow: "1" }}>
+                  <IconButton>
+                    <InstagramIcon
+                      color="secondary"
+                      style={{ marginTop: "3px" }}
+                    />
+                    <Typography variant="subtitle2">
+                      Rachana.ranode3
+                    </Typography>
+                  </IconButton>
+                </Grid>
+                <Grid
+                  style={{
+                    textAlign: "right",
+                    margin: "auto",
+                  }}
+                >
+                  <BeenhereOutlinedIcon
+                    color="primary"
+                    style={{ marginRight: "20px" }}
+                  />
+                  <VisibilityOffIcon
+                    style={{
+                      color: "yellow",
+                      marginRight: "20px",
+                    }}
+                  />
+                  <CheckIcon
+                    style={{
+                      color: "green",
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </Paper>
+            <Paper
+              elevation={3}
+              className={classes.pagesInfo}
+            >
+              <Grid container>
+                <Grid
+                  style={{ marginRight: "10px" }}
+                  item
+                  xs={1}
+                >
+                  <Avatar
+                    alt="Prayag Mukhi"
+                    src="/static/images/avatar/1.jpg"
+                    className={classes.large}
+                  />
+                </Grid>
+                <Grid style={{ flexGrow: 1 }} item xs={10}>
+                  <Typography
+                    variant="h5"
+                    style={{ fontWeight: "bold" }}
+                    color="primary"
+                  >
+                    Prayag Mukhi
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    display="block"
+                    gutterBottom
+                  >
+                    2:03 PM Today
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <ErrorOutlinedIcon
+                    color="secondary"
+                    fontSize="large"
+                  />
+                </Grid>
+              </Grid>
+              <Grid container style={{ marginTop: "3% 0" }}>
+                <Grid
+                  item
+                  xs={11}
+                  style={{
+                    paddingRight: "3%",
+                    margin: "2% 0",
+                  }}
+                >
+                  <Typography variant="subtitle1">
+                    Prayag should marry piyush Prayag should
+                    he do that marry piyush Prayag should
+                    marry piyush Prayag should he do that
+                    marry piyush Prayag should marry piyush
+                    Prayag should he do that marry piyush
+                  </Typography>
+                </Grid>
+                <Grid item style={{ margin: "auto" }}>
+                  <ArrowForwardIosIcon />
+                </Grid>
+              </Grid>
+              <Grid container>
+                <Grid style={{ flexGrow: "1" }}>
+                  <IconButton>
+                    <InstagramIcon
+                      color="secondary"
+                      style={{ marginTop: "3px" }}
+                    />
+                    <Typography variant="subtitle2">
+                      Rachana.ranode3
+                    </Typography>
+                  </IconButton>
+                </Grid>
+                <Grid
+                  style={{
+                    textAlign: "right",
+                    margin: "auto",
+                  }}
+                >
+                  <BeenhereOutlinedIcon
+                    color="primary"
+                    style={{ marginRight: "20px" }}
+                  />
+                  <VisibilityOffIcon
+                    style={{
+                      color: "yellow",
+                      marginRight: "20px",
+                    }}
+                  />
+                  <CheckIcon
+                    style={{
+                      color: "green",
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </Paper>
+            <Paper
+              elevation={3}
+              className={classes.pagesInfo}
+            >
+              <Grid container>
+                <Grid
+                  style={{ marginRight: "10px" }}
+                  item
+                  xs={1}
+                >
+                  <Avatar
+                    alt="Prayag Mukhi"
+                    src="/static/images/avatar/1.jpg"
+                    className={classes.large}
+                  />
+                </Grid>
+                <Grid style={{ flexGrow: 1 }} item xs={10}>
+                  <Typography
+                    variant="h5"
+                    style={{ fontWeight: "bold" }}
+                    color="primary"
+                  >
+                    Prayag Mukhi
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    display="block"
+                    gutterBottom
+                  >
+                    2:03 PM Today
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <ErrorOutlinedIcon
+                    color="secondary"
+                    fontSize="large"
+                  />
+                </Grid>
+              </Grid>
+              <Grid container style={{ marginTop: "3% 0" }}>
+                <Grid
+                  item
+                  xs={11}
+                  style={{
+                    paddingRight: "3%",
+                    margin: "2% 0",
+                  }}
+                >
+                  <Typography variant="subtitle1">
+                    Prayag should marry piyush Prayag should
+                    he do that marry piyush Prayag should
+                    marry piyush Prayag should he do that
+                    marry piyush Prayag should marry piyush
+                    Prayag should he do that marry piyush
+                  </Typography>
+                </Grid>
+                <Grid item style={{ margin: "auto" }}>
+                  <ArrowForwardIosIcon />
+                </Grid>
+              </Grid>
+              <Grid container>
+                <Grid style={{ flexGrow: "1" }}>
+                  <IconButton>
+                    <InstagramIcon
+                      color="secondary"
+                      style={{ marginTop: "3px" }}
+                    />
+                    <Typography variant="subtitle2">
+                      Rachana.ranode3
+                    </Typography>
+                  </IconButton>
+                </Grid>
+                <Grid
+                  style={{
+                    textAlign: "right",
+                    margin: "auto",
+                  }}
+                >
+                  <BeenhereOutlinedIcon
+                    color="primary"
+                    style={{ marginRight: "20px" }}
+                  />
+                  <VisibilityOffIcon
+                    style={{
+                      color: "yellow",
+                      marginRight: "20px",
+                    }}
+                  />
+                  <CheckIcon
+                    style={{
+                      color: "green",
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </Paper>
+            <Paper
+              elevation={3}
+              className={classes.pagesInfo}
+            >
+              <Grid container>
+                <Grid
+                  style={{ marginRight: "10px" }}
+                  item
+                  xs={1}
+                >
+                  <Avatar
+                    alt="Prayag Mukhi"
+                    src="/static/images/avatar/1.jpg"
+                    className={classes.large}
+                  />
+                </Grid>
+                <Grid style={{ flexGrow: 1 }} item xs={10}>
+                  <Typography
+                    variant="h5"
+                    style={{ fontWeight: "bold" }}
+                    color="primary"
+                  >
+                    Prayag Mukhi
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    display="block"
+                    gutterBottom
+                  >
+                    2:03 PM Today
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <ErrorOutlinedIcon
+                    color="secondary"
+                    fontSize="large"
+                  />
+                </Grid>
+              </Grid>
+              <Grid container style={{ marginTop: "3% 0" }}>
+                <Grid
+                  item
+                  xs={11}
+                  style={{
+                    paddingRight: "3%",
+                    margin: "2% 0",
+                  }}
+                >
+                  <Typography variant="subtitle1">
+                    Prayag should marry piyush Prayag should
+                    he do that marry piyush Prayag should
+                    marry piyush Prayag should he do that
+                    marry piyush Prayag should marry piyush
+                    Prayag should he do that marry piyush
+                  </Typography>
+                </Grid>
+                <Grid item style={{ margin: "auto" }}>
+                  <ArrowForwardIosIcon />
+                </Grid>
+              </Grid>
+              <Grid container>
+                <Grid style={{ flexGrow: "1" }}>
+                  <IconButton>
+                    <InstagramIcon
+                      color="secondary"
+                      style={{ marginTop: "3px" }}
+                    />
+                    <Typography variant="subtitle2">
+                      Rachana.ranode3
+                    </Typography>
+                  </IconButton>
+                </Grid>
+                <Grid
+                  style={{
+                    textAlign: "right",
+                    margin: "auto",
+                  }}
+                >
+                  <BeenhereOutlinedIcon
+                    color="primary"
+                    style={{ marginRight: "20px" }}
+                  />
+                  <VisibilityOffIcon
+                    style={{
+                      color: "yellow",
+                      marginRight: "20px",
+                    }}
+                  />
+                  <CheckIcon
+                    style={{
+                      color: "green",
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </Paper>
+            <Paper
+              elevation={3}
+              className={classes.pagesInfo}
+            >
+              <Grid container>
+                <Grid
+                  style={{ marginRight: "10px" }}
+                  item
+                  xs={1}
+                >
+                  <Avatar
+                    alt="Prayag Mukhi"
+                    src="/static/images/avatar/1.jpg"
+                    className={classes.large}
+                  />
+                </Grid>
+                <Grid style={{ flexGrow: 1 }} item xs={10}>
+                  <Typography
+                    variant="h5"
+                    style={{ fontWeight: "bold" }}
+                    color="primary"
+                  >
+                    Prayag Mukhi
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    display="block"
+                    gutterBottom
+                  >
+                    2:03 PM Today
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <ErrorOutlinedIcon
+                    color="secondary"
+                    fontSize="large"
+                  />
+                </Grid>
+              </Grid>
+              <Grid container style={{ marginTop: "3% 0" }}>
+                <Grid
+                  item
+                  xs={11}
+                  style={{
+                    paddingRight: "3%",
+                    margin: "2% 0",
+                  }}
+                >
+                  <Typography variant="subtitle1">
+                    Prayag should marry piyush Prayag should
+                    he do that marry piyush Prayag should
+                    marry piyush Prayag should he do that
+                    marry piyush Prayag should marry piyush
+                    Prayag should he do that marry piyush
+                  </Typography>
+                </Grid>
+                <Grid item style={{ margin: "auto" }}>
+                  <ArrowForwardIosIcon />
+                </Grid>
+              </Grid>
+              <Grid container>
+                <Grid style={{ flexGrow: "1" }}>
+                  <IconButton>
+                    <InstagramIcon
+                      color="secondary"
+                      style={{ marginTop: "3px" }}
+                    />
+                    <Typography variant="subtitle2">
+                      Rachana.ranode3
+                    </Typography>
+                  </IconButton>
+                </Grid>
+                <Grid
+                  style={{
+                    textAlign: "right",
+                    margin: "auto",
+                  }}
+                >
+                  <BeenhereOutlinedIcon
+                    color="primary"
+                    style={{ marginRight: "20px" }}
+                  />
+                  <VisibilityOffIcon
+                    style={{
+                      color: "yellow",
+                      marginRight: "20px",
+                    }}
+                  />
+                  <CheckIcon
+                    style={{
+                      color: "green",
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </Paper>
           </Grid>
 
           <Grid
             item
             lg={3}
+            md={3}
             style={{
               padding: "20px 10px",
             }}
