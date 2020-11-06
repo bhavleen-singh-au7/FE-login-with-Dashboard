@@ -262,7 +262,7 @@ const Dashboard = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Typography variant="subititle1">
+              <Typography variant="subtitle2">
                 Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Libero ipsam odio enim
                 eius esse accusantium qui, corporis
@@ -309,7 +309,7 @@ const Dashboard = () => {
                   />
                 </Grid>
               </Grid>
-              <Typography variant="subititle1">
+              <Typography variant="subtitle2">
                 Prayag should marry piyush Prayag should he
                 do that marry piyush Prayag should marry
                 piyush Prayag should he do that marry piyush
