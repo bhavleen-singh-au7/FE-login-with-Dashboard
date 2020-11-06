@@ -2,7 +2,9 @@ import {
   AppBar,
   Checkbox,
   Grid,
+  LinearProgress,
   Paper,
+  Typography,
 } from "@material-ui/core";
 import React, { Fragment } from "react";
 import Navbar from "../../components/Navbar";
@@ -179,7 +181,35 @@ const Dashboard = () => {
             >
               <h3>Plan Usage</h3>
               <h4>Accounts Connected</h4>
+              <LinearProgress
+                className={classes.linearProgress}
+                variant="determinate"
+                value={66}
+                color="secondary"
+              />
+              <Typography
+                variant="caption"
+                display="block"
+                style={{ textAlign: "right" }}
+                gutterBottom
+              >
+                2 of 3
+              </Typography>
               <h4>Comments Processed</h4>
+              <LinearProgress
+                className={classes.linearProgress}
+                variant="determinate"
+                value={50}
+                color="secondary"
+              />
+              <Typography
+                variant="caption"
+                display="block"
+                style={{ textAlign: "right" }}
+                gutterBottom
+              >
+                5,000 of 10,000
+              </Typography>
             </Paper>
           </Grid>
           <Grid

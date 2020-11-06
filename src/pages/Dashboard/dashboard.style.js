@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "4%",
     borderRadius: "10px",
   },
+  linearProgress: {
+    height: 10,
+    borderRadius: 5,
+  },
 }));
 
 export default useStyles;
