@@ -25,6 +25,7 @@ import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import NotInterestedIcon from "@material-ui/icons/NotInterested";
+import ErrorOutlinedIcon from "@material-ui/icons/ErrorOutlined";
 
 const Dashboard = () => {
   const classes = useStyles();
@@ -222,12 +223,26 @@ const Dashboard = () => {
             </Paper>
           </Grid>
 
-          <Grid
-            item
-            lg={7}
-            style={{ backgroundColor: "blue" }}
-          >
-            <Paper>Center Card</Paper>
+          <Grid item lg={7}>
+            <Grid container>
+              <Grid sm={3} style={{ padding: "1% 4%" }}>
+                <Typography>
+                  Data Range: <Paper>Last 7 Days</Paper>
+                </Typography>
+              </Grid>
+              <Grid sm={3} style={{ padding: "1% 4%" }}>
+                <Paper>Require manual Action</Paper>
+              </Grid>
+              <Grid sm={3} style={{ padding: "1% 4%" }}>
+                <Paper>Marked as Safe{" "}<BeenhereOutlinedIcon/></Paper>
+              </Grid>
+              <Grid sm={3} style={{ padding: "1% 4%" }}>
+                <Paper>
+                  Hidden{" "}
+                  <VisibilityOffIcon />
+                </Paper>
+              </Grid>
+            </Grid>
           </Grid>
 
           <Grid
