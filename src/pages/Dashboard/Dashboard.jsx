@@ -235,7 +235,6 @@ const Dashboard = () => {
             lg={3}
             style={{
               padding: "20px 10px",
-              backgroundColor: "green",
             }}
           >
             <Paper className={classes.pagesInfo}>
