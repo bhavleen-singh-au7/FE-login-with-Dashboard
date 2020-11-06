@@ -1,9 +1,13 @@
 import {
-  AppBar,
+  Avatar,
+  Button,
   Checkbox,
   Grid,
+  IconButton,
+  InputAdornment,
   LinearProgress,
   Paper,
+  TextField,
   Typography,
 } from "@material-ui/core";
 import React, { Fragment } from "react";
@@ -15,6 +19,12 @@ import useStyles from "./dashboard.style";
 // Icons
 import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import CheckIcon from "@material-ui/icons/Check";
+import BeenhereOutlinedIcon from "@material-ui/icons/BeenhereOutlined";
+import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
+import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
+import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
+import NotInterestedIcon from "@material-ui/icons/NotInterested";
 
 const Dashboard = () => {
   const classes = useStyles();
@@ -211,7 +221,7 @@ const Dashboard = () => {
               </Typography>
             </Paper>
           </Grid>
-      
+
           <Grid
             item
             lg={7}
@@ -219,12 +229,135 @@ const Dashboard = () => {
           >
             <Paper>Center Card</Paper>
           </Grid>
+
           <Grid
             item
             lg={3}
-            style={{ backgroundColor: "green" }}
+            style={{
+              padding: "20px 10px",
+              backgroundColor: "green",
+            }}
           >
-            <Paper>Right Body</Paper>
+            <Paper className={classes.pagesInfo}>
+              <Grid container style={{ margin: "5% 0" }}>
+                <Grid style={{ marginRight: "10px" }}>
+                  <Avatar
+                    alt="Rachna Ranade"
+                    src="/static/images/avatar/1.jpg"
+                    className={classes.large}
+                  />
+                </Grid>
+                <Grid>
+                  <Typography
+                    variant="h5"
+                    style={{ fontWeight: "bold" }}
+                  >
+                    Rachna Ranade
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    display="block"
+                    gutterBottom
+                  >
+                    2:03 PM Today
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Typography variant="subititle1">
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Libero ipsam odio enim
+                eius esse accusantium qui, corporis
+                exercitationem voluptas.
+              </Typography>
+
+              <img
+                style={{
+                  margin: "5% 0",
+                  borderRadius: "10px",
+                }}
+                alt="waste_Image"
+                src="https://images.newindianexpress.com/uploads/user/imagelibrary/2020/2/19/w900X450/ICMRnjj.jpg"
+                width="100%"
+              />
+
+              <Grid container style={{ margin: "5% 0" }}>
+                <Grid style={{ marginRight: "10px" }}>
+                  <Avatar
+                    alt="Prayag Mukhi"
+                    src="/static/images/avatar/1.jpg"
+                  />
+                </Grid>
+                <Grid style={{ flexGrow: 1 }}>
+                  <Typography
+                    variant="subtitle1"
+                    style={{ fontWeight: "bold" }}
+                  >
+                    Rachna Ranade
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    display="block"
+                    gutterBottom
+                  >
+                    2:03 PM Today
+                  </Typography>
+                </Grid>
+                <Grid style={{ textAlign: "right" }}>
+                  <CheckIcon style={{ color: "green" }} />
+                  <BeenhereOutlinedIcon color="primary" />
+                  <VisibilityOffIcon
+                    style={{ color: "yellow" }}
+                  />
+                </Grid>
+              </Grid>
+              <Typography variant="subititle1">
+                Prayag should marry piyush Prayag should he
+                do that marry piyush Prayag should marry
+                piyush Prayag should he do that marry piyush
+              </Typography>
+              <TextField
+                style={{ margin: "5% 0" }}
+                variant="outlined"
+                label="Write a reply..."
+                type="text"
+                fullWidth
+                size="small"
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment>
+                      <IconButton>
+                        <SentimentSatisfiedIcon />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+              />
+              <IconButton
+                style={{
+                  fontSize: "small",
+                  color: "blue",
+                }}
+              >
+                Like <ThumbUpAltIcon />
+              </IconButton>
+              <IconButton
+                style={{
+                  fontSize: "small",
+                  color: "red",
+                }}
+              >
+                Ban <NotInterestedIcon />
+              </IconButton>
+              <Button
+                style={{
+                  backgroundColor: "green",
+                  color: "white",
+                  marginLeft: "30%",
+                }}
+              >
+                Reply
+              </Button>
+            </Paper>
           </Grid>
         </Grid>
       </div>

@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
     height: 10,
     borderRadius: 5,
   },
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
+  },
 }));
 
 export default useStyles;
