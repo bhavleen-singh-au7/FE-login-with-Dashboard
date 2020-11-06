@@ -28,7 +28,6 @@ const Dashboard = () => {
             item
             lg={2}
             style={{
-              backgroundColor: "red",
               padding: "20px 10px",
             }}
           >
@@ -212,6 +211,7 @@ const Dashboard = () => {
               </Typography>
             </Paper>
           </Grid>
+      
           <Grid
             item
             lg={7}
