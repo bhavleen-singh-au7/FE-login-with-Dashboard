@@ -32,6 +32,16 @@ const useStyles = makeStyles((theme) => ({
     padding: "3% 8%",
     margin: "0 10%",
   },
+  loginCred: {
+    width: "15%",
+    position: "absolute",
+    bottom: 0,
+    right: "50%",
+    padding: "0 10px",
+  },
+  loginCredHead: {
+    color: "red",
+  },
 }));
 
 export default useStyles;

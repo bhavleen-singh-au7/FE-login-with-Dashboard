@@ -5,6 +5,7 @@ import {
   Grid,
   IconButton,
   InputAdornment,
+  Paper,
   TextField,
   Typography,
 } from "@material-ui/core";
@@ -62,8 +63,7 @@ const Login = ({ history }) => {
           item
           sm={12}
           md={6}
-          className={classes.leftGrid}
-        >
+          className={classes.leftGrid}>
           <h1>
             Rep<span className={classes.logo}>suite</span>.
           </h1>
@@ -72,26 +72,22 @@ const Login = ({ history }) => {
               style={{
                 width: "55%",
                 margin: "auto",
-              }}
-            >
+              }}>
               <Typography
                 variant="h3"
-                style={{ fontWeight: "bold" }}
-              >
+                style={{ fontWeight: "bold" }}>
                 Hey There <span>👋</span>
               </Typography>
               <Typography
                 variant="subtitle2"
-                style={{ fontWeight: "bold" }}
-              >
+                style={{ fontWeight: "bold" }}>
                 Welcome back to Rep
                 <span className={classes.logo}>suite</span>.
               </Typography>
 
               <form
                 autoComplete="off"
-                onSubmit={handleSubmit}
-              >
+                onSubmit={handleSubmit}>
                 <TextField
                   variant="outlined"
                   label="Enter Email..."
@@ -117,8 +113,7 @@ const Login = ({ history }) => {
                     endAdornment: (
                       <InputAdornment>
                         <IconButton
-                          onClick={handleClickShowPassword}
-                        >
+                          onClick={handleClickShowPassword}>
                           {values.showPassword ? (
                             <Visibility />
                           ) : (
@@ -134,8 +129,7 @@ const Login = ({ history }) => {
                   variant="contained"
                   color="secondary"
                   className={classes.buttonCss}
-                  type="submit"
-                >
+                  type="submit">
                   Sign In
                 </Button>
                 <br />
@@ -150,42 +144,43 @@ const Login = ({ history }) => {
                     borderBottom: "1px solid black",
                     textAlign: "center",
                     margin: "8% 0",
-                  }}
-                >
+                  }}>
                   <span
                     style={{
                       fontSize: "16px",
                       backgroundColor: "white",
                       padding: "0 7px",
-                    }}
-                  >
+                    }}>
                     Or continue with
                   </span>
                 </div>
                 <Button className={classes.actionBtn}>
                   <i
                     className="fab fa-google fa-2x"
-                    style={{ color: "red" }}
-                  ></i>
+                    style={{ color: "red" }}></i>
                 </Button>
-                <Button
-                  className={classes.actionBtn}
-                >
+                <Button className={classes.actionBtn}>
                   <i
                     className="fab fa-facebook fa-2x"
-                    style={{ color: "blue" }}
-                  ></i>
+                    style={{ color: "blue" }}></i>
                 </Button>
               </form>
             </Box>
           </Box>
+          <Paper className={classes.loginCred}>
+            <h4 className={classes.loginCredHead}>
+              Sample Login Credentials
+            </h4>
+            <strong>Username</strong>: a@a
+            <br />
+            <strong>Password</strong>: abc
+          </Paper>
         </Grid>
         <Grid
           item
           sm={12}
           md={6}
-          className={classes.rightGrid}
-        >
+          className={classes.rightGrid}>
           <img
             alt="working_hard"
             src={RightGridImage}
@@ -198,8 +193,7 @@ const Login = ({ history }) => {
               lineHeight: "2.5rem",
               fontWeight: "bold",
               fontSize: "16px",
-            }}
-          >
+            }}>
             <ChatBubbleIcon fontSize="small" /> Fully
             Automated Comment Moderation
             <br />
